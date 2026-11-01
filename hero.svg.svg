@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="380">
+  <defs>
+    <!-- Midnight Glass Glow & Aurora Ramp -->
+    <radialGradient id="heroAuroraGlow" cx="82%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.28" />
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#0d0e16" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="heroAuroraRamp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="heroGlassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Dot Matrix -->
+    <pattern id="heroDotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.04" />
+    </pattern>
+
+    <!-- Viewfinder Melting Mask -->
+    <radialGradient id="heroVignette" cx="50%" cy="50%" r="50%">
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <mask id="heroVideoMask">
+      <rect x="520" y="25" width="365" height="330" rx="16" fill="url(#heroVignette)" />
+    </mask>
+
+    <!-- Name Rising Mask Reveal -->
+    <mask id="heroNameMask">
+      <rect x="0" y="0" width="450" height="65" fill="#ffffff">
+        <animate attributeName="y" values="65; 0" dur="1.2s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" />
+      </rect>
+    </mask>
+
+    <style>
+      .hero-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
+      .hero-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+      /* Corner Brackets Entrance */
+      @keyframes heroBracketsIn {
+        0% { stroke-dasharray: 0, 100; stroke-dashoffset: 50; }
+        100% { stroke-dasharray: 100, 0; stroke-dashoffset: 0; }
+      }
+      .hero-bracket { animation: heroBracketsIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+      /* Pulsing Open Pill Dot */
+      @keyframes heroPulseDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.75); }
+      }
+      .hero-collab-dot { animation: heroPulseDot 2s ease-in-out infinite; transform-origin: 14px 13px; }
+
+      /* Blinking REC Dot */
+      @keyframes heroRecBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0.15; }
+      }
+      .hero-rec-dot { animation: heroRecBlink 1.2s infinite; }
+
+      /* Synced 4.0s Scrubber Loop */
+      @keyframes heroScrubPlay {
+        0% { width: 0px; }
+        50% { width: 320px; }      /* 2.0s playback */
+        85% { width: 320px; }      /* hold ~1.4s */
+        100% { width: 0px; }       /* quick reset/fade */
+      }
+      .hero-scrubber { animation: heroScrubPlay 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+      /* Role Switcher */
+      @keyframes heroRoleFlip {
+        0%, 45% { opacity: 1; transform: translateY(0); }
+        50%, 95% { opacity: 0; transform: translateY(-8px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes heroRoleFlip2 {
+        0%, 45% { opacity: 0; transform: translateY(8px); }
+        50%, 95% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(8px); }
+      }
+      .hero-role-a { animation: heroRoleFlip 6s infinite; }
+      .hero-role-b { animation: heroRoleFlip2 6s infinite; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="920" height="380" rx="20" fill="#0d0e16" />
+  <rect width="920" height="380" rx="20" fill="url(#heroAuroraGlow)" />
+  <rect width="920" height="380" rx="20" fill="url(#heroDotGrid)" />
+  <rect width="918" height="378" x="1" y="1" rx="19" fill="none" stroke="url(#heroGlassBorder)" stroke-width="1.2" />
+
+  <!-- Left Content Column -->
+  <g transform="translate(45, 42)">
+    <!-- Open to Collabs Pill -->
+    <g>
+      <rect x="0" y="0" width="168" height="26" rx="13" fill="#151726" stroke="#22d3ee" stroke-opacity="0.4" stroke-width="1" />
+      <circle class="hero-collab-dot" cx="14" cy="13" r="4" fill="#22d3ee" />
+      <text class="hero-mono" x="26" y="17" fill="#22d3ee" font-size="10.5" font-weight="700" letter-spacing="0.8">OPEN TO COLLABS</text>
+    </g>
+
+    <!-- Typing Greeting -->
+    <text class="hero-mono" x="0" y="58" fill="#94a3b8" font-size="14" letter-spacing="0.5">Hi there, I'm</text>
+
+    <!-- Name Heading Revealed with Rising Mask -->
+    <g transform="translate(0, 68)" mask="url(#heroNameMask)">
+      <text class="hero-sans" x="0" y="44" font-size="46" font-weight="800" fill="url(#heroAuroraRamp)" letter-spacing="-0.5">RAJAT</text>
+    </g>
+
+    <!-- Dynamic Roles -->
+    <g transform="translate(0, 150)">
+      <g class="hero-role-a">
+        <text class="hero-mono" x="0" y="0" fill="#f8fafc" font-size="19" font-weight="600">> SOFTWARE ENGINEER</text>
+      </g>
+      <g class="hero-role-b">
+        <text class="hero-mono" x="0" y="0" fill="#22d3ee" font-size="19" font-weight="600">> FULL-STACK ARCHITECT</text>
+      </g>
+      <text class="hero-sans" x="0" y="30" fill="#94a3b8" font-size="13">Python, C, Java, and modern web systems builder based in Meerut.</text>
+    </g>
+
+    <!-- Meta Details Row -->
+    <g transform="translate(0, 238)">
+      <!-- Location -->
+      <g>
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#22d3ee" transform="translate(0, -2) scale(0.8)" />
+        <text class="hero-sans" x="20" y="12" fill="#cbd5e1" font-size="12.5">Meerut, IN</text>
+      </g>
+
+      <!-- Company -->
+      <g transform="translate(130, 0)">
+        <path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-5-7L2 8v1h19V8l-9-5z" fill="#a78bfa" transform="translate(0, -2) scale(0.8)" />
+        <text class="hero-sans" x="20" y="12" fill="#cbd5e1" font-size="12.5">Status: Open / Exploring Opportunities</text>
+      </g>
+
+      <!-- GitHub -->
+      <g transform="translate(390, 0)">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" fill="#f472b6" transform="translate(0, -2) scale(0.65)" />
+        <text class="hero-sans" x="20" y="12" fill="#cbd5e1" font-size="12.5">engrajat2-sudo</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side: Camera Viewfinder with SMIL Frame Cycling Loop -->
+  <g transform="translate(540, 32)">
+    <rect x="0" y="0" width="345" height="315" rx="14" fill="#090a12" stroke="#1c2033" stroke-width="1.5" />
+
+    <!-- SMIL 4-second Loop Video Playback Simulation -->
+    <g mask="url(#heroVideoMask)">
+      <!-- Frame 0: Start of wave -->
+      
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="1;1;0;0;0;0;1" keyTimes="0; 0.15; 0.18; 0.90; 0.95; 0.98; 1" />
+      
+
+      <!-- Frame 1: Mid wave gesture -->
+      
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0;0;1;1;0;0;0" keyTimes="0; 0.16; 0.20; 0.35; 0.38; 0.95; 1" />
+      
+
+      <!-- Frame 2: Full wave & hold (~1.4s hold on last frame) -->
+      
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0;0;0;1;1;0;0" keyTimes="0; 0.36; 0.39; 0.85; 0.92; 0.95; 1" />
+      
+    </g>
+
+    <!-- Viewfinder Reticles & HUD -->
+    <path class="hero-bracket" d="M 16 38 L 16 16 L 38 16" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" />
+    <path class="hero-bracket" d="M 329 38 L 329 16 L 307 16" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" />
+    <path class="hero-bracket" d="M 16 277 L 16 299 L 38 299" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" />
+    <path class="hero-bracket" d="M 329 277 L 329 299 L 307 299" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- REC Dot & Video Meta -->
+    <circle class="hero-rec-dot" cx="26" cy="36" r="4.5" fill="#ef4444" />
+    <text class="hero-mono" x="37" y="40" fill="#ef4444" font-size="11" font-weight="700">REC</text>
+    <text class="hero-mono" x="210" y="40" fill="#94a3b8" font-size="10.5">WAVE_CLIP_02S.RAW</text>
+
+    <!-- Scrubber Bar Sync -->
+    <g transform="translate(12, 292)">
+      <rect x="0" y="0" width="320" height="4" rx="2" fill="#1e293b" />
+      <rect class="hero-scrubber" x="0" y="0" width="0" height="4" rx="2" fill="url(#heroAuroraRamp)" />
+    </g>
+  </g>
+</svg>
