@@ -22,7 +22,7 @@
       @keyframes alCursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       .al-cursor { animation: alCursorBlink 0.9s infinite; }
 
-      /* Instagram Segment Carousel Crossfades (4s per slide) */
+      /* Instagram Segment Carousel Crossfades */
       @keyframes alSlide1 {
         0%, 30% { opacity: 1; }
         35%, 95% { opacity: 0; }
@@ -52,7 +52,7 @@
     </style>
   </defs>
 
-  <!-- Left Card: Fake Browser Window -->
+  <!-- Left Card: Browser Window -->
   <g transform="translate(0, 0)">
     <rect width="445" height="360" rx="18" fill="url(#alCardBg)" />
     <rect width="445" height="360" rx="18" fill="url(#alDots)" />
@@ -74,30 +74,30 @@
       <rect x="12" y="15" width="44" height="44" rx="8" fill="#22d3ee" fill-opacity="0.12" />
       <path d="M25 29 L39 29 M32 22 L32 36 M39 43 L25 43 M32 36 L32 50" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" />
       <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Python Engineering</text>
-      <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">FastAPI backends, asynchronous queues & algorithmic tooling</text>
+      <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">FastAPI backends, asynchronous queues and algorithmic tooling</text>
 
-      <!-- Web Dev & React -->
+      <!-- Web Dev and React -->
       <g transform="translate(0, 84)">
         <rect x="0" y="0" width="409" height="74" rx="12" fill="#141728" stroke="#1f233a" stroke-width="1" />
         <rect x="12" y="15" width="44" height="44" rx="8" fill="#a78bfa" fill-opacity="0.12" />
         <path d="M26 37 L34 27 L42 37 M30 47 L38 47" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" fill="none" />
         <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Modern Web Applications</text>
-        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">High-performance frontend pipelines, clean UI architecture & SVG animations</text>
+        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">High-performance frontend pipelines, clean UI architecture and SVG animations</text>
       </g>
 
-      <!-- Systems C & Java -->
+      <!-- Systems C and Java -->
       <g transform="translate(0, 168)">
         <rect x="0" y="0" width="409" height="74" rx="12" fill="#141728" stroke="#1f233a" stroke-width="1" />
         <rect x="12" y="15" width="44" height="44" rx="8" fill="#f472b6" fill-opacity="0.12" />
         <circle cx="34" cy="37" r="10" stroke="#f472b6" stroke-width="2" fill="none" />
         <path d="M34 31 L34 37 L38 37" stroke="#f472b6" stroke-width="2" stroke-linecap="round" />
-        <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Low-Level Systems (C & Java)</text>
-        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">Memory management, multi-threaded algorithms & OOP foundations</text>
+        <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Low-Level Systems (C and Java)</text>
+        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">Memory management, multi-threaded algorithms and OOP foundations</text>
       </g>
     </g>
   </g>
 
-  <!-- Right Card: Hobbies Carousel & Daily Activity Rings -->
+  <!-- Right Card: Hobbies Carousel and Daily Activity Rings -->
   <g transform="translate(475, 0)">
     <rect width="445" height="360" rx="18" fill="url(#alCardBg)" />
     <rect width="445" height="360" rx="18" fill="url(#alDots)" />
@@ -110,22 +110,22 @@
       <rect x="270" y="0" width="125" height="3.5" rx="1.5" fill="#f472b6" />
     </g>
 
-    <!-- Carousel Slides (Hobbies Focus: Music & Audio) -->
+    <!-- Carousel Slides -->
     <g class="al-s1" transform="translate(25, 45)">
-      <text class="al-mono" x="0" y="20" fill="#22d3ee" font-size="11.5" font-weight="700">01 // MUSIC & SOUND LAB</text>
-      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Lo-Fi Beats & Audio Engineering</text>
+      <text class="al-mono" x="0" y="20" fill="#22d3ee" font-size="11.5" font-weight="700">01 // MUSIC AND SOUND LAB</text>
+      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Lo-Fi Beats and Audio Engineering</text>
       <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Exploring synthesizer design, chill beats, and acoustics while refactoring code.</text>
     </g>
 
     <g class="al-s2" transform="translate(25, 45)">
       <text class="al-mono" x="0" y="20" fill="#a78bfa" font-size="11.5" font-weight="700">02 // CREATIVE CODING</text>
-      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Visualizers & Generative Art</text>
-      <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Syncing audio frequencies with interactive WebGL & Canvas shaders.</text>
+      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Visualizers and Generative Art</text>
+      <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Syncing audio frequencies with interactive WebGL and Canvas shaders.</text>
     </g>
 
     <g class="al-s3" transform="translate(25, 45)">
       <text class="al-mono" x="0" y="20" fill="#f472b6" font-size="11.5" font-weight="700">03 // PROBLEM SOLVING</text>
-      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Data Structures & Quantitative Logic</text>
+      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Data Structures and Quantitative Logic</text>
       <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Continuous practice on graph algorithms, memory layouts, and algorithmic efficiency.</text>
     </g>
 
@@ -150,10 +150,10 @@
       <text class="al-mono" x="14" y="19" fill="#cbd5e1" font-size="11.5">Engineering (85%)</text>
 
       <circle cx="0" cy="40" r="4.5" fill="#a78bfa" />
-      <text class="al-mono" x="14" y="44" fill="#cbd5e1" font-size="11.5">Music & Acoustic Focus (78%)</text>
+      <text class="al-mono" x="14" y="44" fill="#cbd5e1" font-size="11.5">Music and Acoustic Focus (78%)</text>
 
       <circle cx="0" cy="65" r="4.5" fill="#f472b6" />
-      <text class="al-mono" x="14" y="69" fill="#cbd5e1" font-size="11.5">C & Java Architecture (72%)</text>
+      <text class="al-mono" x="14" y="69" fill="#cbd5e1" font-size="11.5">C and Java Architecture (72%)</text>
     </g>
   </g>
 </svg>
