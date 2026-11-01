@@ -82,6 +82,14 @@
       <g transform="translate(35, 28)">
         <rect width="150" height="135" rx="10" fill="#080910" stroke="url(#idCardBorder)" stroke-width="1.5" />
         
+        <!-- Vector Cyber Avatar Icon (Zero external file dependencies) -->
+        <circle cx="75" cy="52" r="28" fill="#1e2238" stroke="#a78bfa" stroke-width="2" />
+        <path d="M 45 118 C 45 92 60 84 75 84 C 90 84 105 92 105 118 Z" fill="#1e2238" stroke="#22d3ee" stroke-width="2" />
+        <!-- Glasses detail -->
+        <rect x="60" y="46" width="12" height="8" rx="2" fill="#22d3ee" />
+        <rect x="78" y="46" width="12" height="8" rx="2" fill="#22d3ee" />
+        <line x1="72" y1="50" x2="78" y2="50" stroke="#22d3ee" stroke-width="1.5" />
+        <text class="id-mono" x="75" y="128" fill="#a78bfa" font-size="10" font-weight="700" text-anchor="middle">RAJAT // ENG</text>
         
         <!-- Traveling Border Light (SMIL) -->
         <circle cx="0" cy="0" r="3" fill="#22d3ee" filter="drop-shadow(0 0 4px #22d3ee)">
