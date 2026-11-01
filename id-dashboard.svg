@@ -21,7 +21,6 @@
       .id-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
       .id-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
 
-      /* Damped Pendulum Swing */
       @keyframes idBadgeSwing {
         0% { transform: rotate(15deg); }
         22% { transform: rotate(-10deg); }
@@ -35,14 +34,12 @@
         animation: idBadgeSwing 4.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
       }
 
-      /* Holographic Sweep */
       @keyframes idSweepFx {
         0% { transform: translateX(-140px) skewX(-20deg); }
         50%, 100% { transform: translateX(340px) skewX(-20deg); }
       }
       .id-holo { animation: idSweepFx 4.2s ease-in-out infinite; }
 
-      /* Bar Charts Growth */
       @keyframes idBarG1 { 0% { width: 0; } 100% { width: 210px; } }
       @keyframes idBarG2 { 0% { width: 0; } 100% { width: 165px; } }
       @keyframes idBarG3 { 0% { width: 0; } 100% { width: 125px; } }
@@ -78,20 +75,19 @@
       <!-- Badge Slot -->
       <rect x="85" y="10" width="50" height="6" rx="3" fill="#080910" />
 
-      <!-- Avatar Photo and Traveling Border Light -->
+      <!-- Avatar Photo Frame -->
       <g transform="translate(35, 28)">
         <rect width="150" height="135" rx="10" fill="#080910" stroke="url(#idCardBorder)" stroke-width="1.5" />
         
-        <!-- Vector Cyber Avatar Icon (Zero external file dependencies) -->
+        <!-- Vector Cyber Avatar Icon -->
         <circle cx="75" cy="52" r="28" fill="#1e2238" stroke="#a78bfa" stroke-width="2" />
         <path d="M 45 118 C 45 92 60 84 75 84 C 90 84 105 92 105 118 Z" fill="#1e2238" stroke="#22d3ee" stroke-width="2" />
-        <!-- Glasses detail -->
         <rect x="60" y="46" width="12" height="8" rx="2" fill="#22d3ee" />
         <rect x="78" y="46" width="12" height="8" rx="2" fill="#22d3ee" />
         <line x1="72" y1="50" x2="78" y2="50" stroke="#22d3ee" stroke-width="1.5" />
         <text class="id-mono" x="75" y="128" fill="#a78bfa" font-size="10" font-weight="700" text-anchor="middle">RAJAT // ENG</text>
         
-        <!-- Traveling Border Light (SMIL) -->
+        <!-- Traveling Border Light -->
         <circle cx="0" cy="0" r="3" fill="#22d3ee" filter="drop-shadow(0 0 4px #22d3ee)">
           <animateMotion path="M 5 5 L 145 5 L 145 130 L 5 130 Z" dur="4s" repeatCount="indefinite" />
         </circle>
@@ -136,7 +132,6 @@
 
   <!-- Right: Dashboard and KPI Tiles -->
   <g transform="translate(300, 32)">
-    <!-- KPI Row -->
     <g>
       <rect x="0" y="0" width="180" height="80" rx="12" fill="#141624" stroke="#25283d" stroke-width="1" />
       <text class="id-mono" x="18" y="24" fill="#94a3b8" font-size="10">TOTAL COMMITS</text>
@@ -151,7 +146,6 @@
       <text class="id-sans" x="418" y="58" fill="#f472b6" font-size="28" font-weight="800">99.8%</text>
     </g>
 
-    <!-- Top Repos Single-Hue Bar Chart -->
     <g transform="translate(0, 105)">
       <rect width="380" height="235" rx="14" fill="#121422" stroke="#1f233a" stroke-width="1" />
       <text class="id-mono" x="20" y="28" fill="#f8fafc" font-size="11.5" font-weight="700">FEATURED REPOSITORIES // FOCUS</text>
@@ -178,7 +172,6 @@
       </g>
     </g>
 
-    <!-- "Now" Status Panel -->
     <g transform="translate(400, 105)">
       <rect width="180" height="235" rx="14" fill="#121422" stroke="#1f233a" stroke-width="1" />
       <text class="id-mono" x="16" y="28" fill="#22d3ee" font-size="11" font-weight="700">NOW STATUS</text>
