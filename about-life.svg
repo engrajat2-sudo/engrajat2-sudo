@@ -16,39 +16,10 @@
     </pattern>
 
     <style>
-      .al-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
-      .al-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-
+      .al-mono { font-family: monospace; }
+      .al-sans { font-family: sans-serif; }
       @keyframes alCursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       .al-cursor { animation: alCursorBlink 0.9s infinite; }
-
-      /* Instagram Segment Carousel Crossfades */
-      @keyframes alSlide1 {
-        0%, 30% { opacity: 1; }
-        35%, 95% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      @keyframes alSlide2 {
-        0%, 30% { opacity: 0; }
-        35%, 65% { opacity: 1; }
-        70%, 100% { opacity: 0; }
-      }
-      @keyframes alSlide3 {
-        0%, 65% { opacity: 0; }
-        70%, 95% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-      .al-s1 { animation: alSlide1 12s infinite; }
-      .al-s2 { animation: alSlide2 12s infinite; }
-      .al-s3 { animation: alSlide3 12s infinite; }
-
-      /* Daily Rings Fill Animation */
-      @keyframes alRingFillCode { 0% { stroke-dashoffset: 283; } 100% { stroke-dashoffset: 42; } }
-      @keyframes alRingFillMusic { 0% { stroke-dashoffset: 220; } 100% { stroke-dashoffset: 48; } }
-      @keyframes alRingFillSystem { 0% { stroke-dashoffset: 160; } 100% { stroke-dashoffset: 35; } }
-      .al-ring-1 { stroke-dasharray: 283; animation: alRingFillCode 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      .al-ring-2 { stroke-dasharray: 220; animation: alRingFillMusic 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      .al-ring-3 { stroke-dasharray: 160; animation: alRingFillSystem 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     </style>
   </defs>
 
@@ -58,7 +29,6 @@
     <rect width="445" height="360" rx="18" fill="url(#alDots)" />
     <rect width="443" height="358" x="1" y="1" rx="17" fill="none" stroke="url(#alBorder)" stroke-width="1.2" />
 
-    <!-- Browser Chrome -->
     <rect x="15" y="16" width="415" height="34" rx="8" fill="#141624" stroke="#25283d" stroke-width="1" />
     <circle cx="32" cy="33" r="4" fill="#ef4444" />
     <circle cx="46" cy="33" r="4" fill="#f59e0b" />
@@ -69,91 +39,69 @@
 
     <!-- Capabilities Rows -->
     <g transform="translate(18, 70)">
-      <!-- Python Ecosystem -->
       <rect x="0" y="0" width="409" height="74" rx="12" fill="#141728" stroke="#1f233a" stroke-width="1" />
       <rect x="12" y="15" width="44" height="44" rx="8" fill="#22d3ee" fill-opacity="0.12" />
       <path d="M25 29 L39 29 M32 22 L32 36 M39 43 L25 43 M32 36 L32 50" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" />
       <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Python Engineering</text>
-      <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">FastAPI backends, asynchronous queues and algorithmic tooling</text>
+      <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">FastAPI backends, async queues and algorithmic tooling</text>
 
-      <!-- Web Dev and React -->
       <g transform="translate(0, 84)">
         <rect x="0" y="0" width="409" height="74" rx="12" fill="#141728" stroke="#1f233a" stroke-width="1" />
         <rect x="12" y="15" width="44" height="44" rx="8" fill="#a78bfa" fill-opacity="0.12" />
         <path d="M26 37 L34 27 L42 37 M30 47 L38 47" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" fill="none" />
         <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Modern Web Applications</text>
-        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">High-performance frontend pipelines, clean UI architecture and SVG animations</text>
+        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">High-performance frontend pipelines, clean UI architecture</text>
       </g>
 
-      <!-- Systems C and Java -->
       <g transform="translate(0, 168)">
         <rect x="0" y="0" width="409" height="74" rx="12" fill="#141728" stroke="#1f233a" stroke-width="1" />
         <rect x="12" y="15" width="44" height="44" rx="8" fill="#f472b6" fill-opacity="0.12" />
         <circle cx="34" cy="37" r="10" stroke="#f472b6" stroke-width="2" fill="none" />
         <path d="M34 31 L34 37 L38 37" stroke="#f472b6" stroke-width="2" stroke-linecap="round" />
         <text class="al-sans" x="68" y="33" fill="#f8fafc" font-size="14" font-weight="700">Low-Level Systems (C and Java)</text>
-        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">Memory management, multi-threaded algorithms and OOP foundations</text>
+        <text class="al-sans" x="68" y="52" fill="#94a3b8" font-size="12">Memory management, multi-threaded algorithms, OOP</text>
       </g>
     </g>
   </g>
 
-  <!-- Right Card: Hobbies Carousel and Daily Activity Rings -->
+  <!-- Right Card: Hobbies & Daily Activity Rings -->
   <g transform="translate(475, 0)">
     <rect width="445" height="360" rx="18" fill="url(#alCardBg)" />
     <rect width="445" height="360" rx="18" fill="url(#alDots)" />
     <rect width="443" height="358" x="1" y="1" rx="17" fill="none" stroke="url(#alBorder)" stroke-width="1.2" />
 
-    <!-- Instagram-style Progress Segments -->
     <g transform="translate(25, 20)">
       <rect x="0" y="0" width="125" height="3.5" rx="1.5" fill="#22d3ee" />
       <rect x="135" y="0" width="125" height="3.5" rx="1.5" fill="#a78bfa" />
       <rect x="270" y="0" width="125" height="3.5" rx="1.5" fill="#f472b6" />
     </g>
 
-    <!-- Carousel Slides -->
-    <g class="al-s1" transform="translate(25, 45)">
+    <g transform="translate(25, 45)">
       <text class="al-mono" x="0" y="20" fill="#22d3ee" font-size="11.5" font-weight="700">01 // MUSIC AND SOUND LAB</text>
       <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Lo-Fi Beats and Audio Engineering</text>
-      <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Exploring synthesizer design, chill beats, and acoustics while refactoring code.</text>
+      <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Exploring synthesizer design, chill beats, and acoustics while coding.</text>
     </g>
 
-    <g class="al-s2" transform="translate(25, 45)">
-      <text class="al-mono" x="0" y="20" fill="#a78bfa" font-size="11.5" font-weight="700">02 // CREATIVE CODING</text>
-      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Visualizers and Generative Art</text>
-      <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Syncing audio frequencies with interactive WebGL and Canvas shaders.</text>
-    </g>
-
-    <g class="al-s3" transform="translate(25, 45)">
-      <text class="al-mono" x="0" y="20" fill="#f472b6" font-size="11.5" font-weight="700">03 // PROBLEM SOLVING</text>
-      <text class="al-sans" x="0" y="44" fill="#f8fafc" font-size="16" font-weight="800">Data Structures and Quantitative Logic</text>
-      <text class="al-sans" x="0" y="66" fill="#94a3b8" font-size="13">Continuous practice on graph algorithms, memory layouts, and algorithmic efficiency.</text>
-    </g>
-
-    <!-- Daily Activity Rings -->
     <g transform="translate(130, 235)">
-      <!-- Coding Ring -->
       <circle cx="0" cy="0" r="45" fill="none" stroke="#1c2033" stroke-width="7" />
-      <circle class="al-ring-1" cx="0" cy="0" r="45" fill="none" stroke="#22d3ee" stroke-width="7" stroke-linecap="round" transform="rotate(-90)" />
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#22d3ee" stroke-width="7" stroke-dasharray="283" stroke-dashoffset="42" stroke-linecap="round" transform="rotate(-90)" />
 
-      <!-- Music Exploration Ring -->
       <circle cx="0" cy="0" r="35" fill="none" stroke="#1c2033" stroke-width="7" />
-      <circle class="al-ring-2" cx="0" cy="0" r="35" fill="none" stroke="#a78bfa" stroke-width="7" stroke-linecap="round" transform="rotate(-90)" />
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#a78bfa" stroke-width="7" stroke-dasharray="220" stroke-dashoffset="48" stroke-linecap="round" transform="rotate(-90)" />
 
-      <!-- Systems Study Ring -->
       <circle cx="0" cy="0" r="25" fill="none" stroke="#1c2033" stroke-width="7" />
-      <circle class="al-ring-3" cx="0" cy="0" r="25" fill="none" stroke="#f472b6" stroke-width="7" stroke-linecap="round" transform="rotate(-90)" />
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#f472b6" stroke-width="7" stroke-dasharray="160" stroke-dashoffset="35" stroke-linecap="round" transform="rotate(-90)" />
     </g>
 
-    <!-- Legend -->
     <g transform="translate(215, 195)">
       <circle cx="0" cy="15" r="4.5" fill="#22d3ee" />
       <text class="al-mono" x="14" y="19" fill="#cbd5e1" font-size="11.5">Engineering (85%)</text>
 
       <circle cx="0" cy="40" r="4.5" fill="#a78bfa" />
-      <text class="al-mono" x="14" y="44" fill="#cbd5e1" font-size="11.5">Music and Acoustic Focus (78%)</text>
+      <text class="al-mono" x="14" y="44" fill="#cbd5e1" font-size="11.5">Music Focus (78%)</text>
 
       <circle cx="0" cy="65" r="4.5" fill="#f472b6" />
-      <text class="al-mono" x="14" y="69" fill="#cbd5e1" font-size="11.5">C and Java Architecture (72%)</text>
+      <text class="al-mono" x="14" y="69" fill="#cbd5e1" font-size="11.5">Systems Focus (72%)</text>
     </g>
   </g>
 </svg>
